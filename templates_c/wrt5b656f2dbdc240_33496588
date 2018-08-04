@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-08-04 09:24:37
+/* Smarty version 3.1.30, created on 2018-08-04 09:17:33
   from "C:\wamp64\www\20180802\view\ucenter\profile.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5b6570d5975940_16721793',
+  'unifunc' => 'content_5b656f2dbd7013_36871782',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f4d040b59015c05ecddca61dec66e23a02f07a71' => 
     array (
       0 => 'C:\\wamp64\\www\\20180802\\view\\ucenter\\profile.html',
-      1 => 1533374676,
+      1 => 1533374252,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:login_state.html' => 1,
   ),
 ),false)) {
-function content_5b6570d5975940_16721793 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b656f2dbd7013_36871782 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,16 +46,25 @@ function content_5b6570d5975940_16721793 (Smarty_Internal_Template $_smarty_tpl)
 
 </head>
 <body>
+	<h3>user表的数据</h3>
+	<p><?php echo $_smarty_tpl->tpl_vars['username']->value['uname'];?>
+</p>
+	<p><?php echo $_smarty_tpl->tpl_vars['username']->value['ulname'];?>
+</p>
+	
 
 	<div class="login_state">
 		<?php $_smarty_tpl->_subTemplateRender("file:login_state.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 	</div>
+	<!-- <?php echo $_smarty_tpl->tpl_vars['ulxname']->value;?>
+ -->
 	<!-- 自己写的 -->
 	<div class="container">
-		<div class="ucenter">
-			<div class="tab">
+		<div class="jd_nav">京东</div>
+		<div class="row ucenter">
+			<div class="col-md-2 tab">
 				<h3>设置</h3>
 				<ul>
 					<li><a href="<?php echo url('ucenter','profile');?>
@@ -63,6 +72,10 @@ function content_5b6570d5975940_16721793 (Smarty_Internal_Template $_smarty_tpl)
 					<li><a href="<?php echo url('ucenter','show');?>
 ">收货地址</a></li>
 				</ul>
+			</div>
+			<div class="col-md-10">
+				<div class="content">111</div>
+				<div class="content">222</div>
 			</div>
 		</div>
 	</div>
@@ -81,10 +94,8 @@ function content_5b6570d5975940_16721793 (Smarty_Internal_Template $_smarty_tpl)
 		<form action="<?php echo url('ucenter','doprofile');?>
 " class="form" method="post">
 	        <div class="content">
-				<label>用户名：<?php echo $_smarty_tpl->tpl_vars['username']->value['uname'];?>
-</label>
-				<label>登录名：<?php echo $_smarty_tpl->tpl_vars['username']->value['ulname'];?>
-</label>
+				<label>用户名：</label>
+				<label>登录名：</label>
 				<div class="form-group">
 					<label>昵称：</label>
 					<input type="text" class="form-control" name="name" v-model="info.name">
@@ -125,9 +136,7 @@ function content_5b6570d5975940_16721793 (Smarty_Internal_Template $_smarty_tpl)
 				<div class="form-group">
 					<label>兴趣爱好</label>
 					 <ul class="row hobby_box">
-		            	<li v-for="(hb,xb) in hobby"  @click="choise(xb)"  :class="{ choise:cs_a.indexOf(xb)>-1 }">
-		              		$hb$
-		          		</li>       
+		              <li v-for="(hb,xb) in hobby"  @click="choise(xb)"  :class="{ choise:cs_a.indexOf(xb)>-1 }">$hb$</li>       
 		             </ul>
 				</div>
 				
@@ -186,7 +195,6 @@ function content_5b6570d5975940_16721793 (Smarty_Internal_Template $_smarty_tpl)
 
 <?php echo '<script'; ?>
 >
-	Vue.http.options.emulateJSON = true;
 	new Vue({
 		el:'.container',
 		delimiters:['$','$'],

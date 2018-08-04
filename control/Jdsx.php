@@ -29,7 +29,12 @@ class Jdsx extends Control
 	// 商品详情页，商品列表信息 (观钦)
 	public function jdsx_info()
 	{
-		$this->assign('uname', $_SESSION['u_name']);
+		if (empty($_SESSION['u_name']) ){
+			$this->assign('uname', null);
+		}
+		else{
+			$this->assign('uname', $_SESSION['u_name']);
+		}
 		$this->display();
 	}
 }

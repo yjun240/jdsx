@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-08-04 07:13:40
-  from "C:\wamp64\www\20180802\view\ucenter\address.html" */
+/* Smarty version 3.1.30, created on 2018-08-04 07:24:23
+  from "C:\wamp64\www\20180802\view\ucenter\show.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5b65522410e2d3_02556753',
+  'unifunc' => 'content_5b6554a73ec6d8_70391799',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'f5c71faa85458f02d57d770a43672d18204ce7ae' => 
+    '1ede6f356996da13cdb1f998b5bfcb9b9926d389' => 
     array (
-      0 => 'C:\\wamp64\\www\\20180802\\view\\ucenter\\address.html',
-      1 => 1533366819,
+      0 => 'C:\\wamp64\\www\\20180802\\view\\ucenter\\show.html',
+      1 => 1533367443,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b65522410e2d3_02556753 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b6554a73ec6d8_70391799 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +33,7 @@ function content_5b65522410e2d3_02556753 (Smarty_Internal_Template $_smarty_tpl)
  type="text/javascript" src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"><?php echo '</script'; ?>
 >
 	<title>用户个人中心</title>
-	<link rel="stylesheet" href="public/static/address.css?4">
+	<link rel="stylesheet" href="public/static/address.css">
 </head>
 <body style="background:#f5f5f5">
 
@@ -82,8 +82,8 @@ function content_5b65522410e2d3_02556753 (Smarty_Internal_Template $_smarty_tpl)
           <span class="close" v-on:click="greet_a" >&times;</span>
           <p>添加收货地址</p>
          </div>
-        <form  method="post" class="form_a" action="<?php echo url('ucenter','address');?>
->
+        <form  method="post" class="form_a" action="<?php echo url('ucenter','show');?>
+">
 			<div class="form-group">
 				<label>收货人：</label>
 				<input type="text" class="form-control" id="Ars_name" 
@@ -131,53 +131,58 @@ function content_5b65522410e2d3_02556753 (Smarty_Internal_Template $_smarty_tpl)
 			data: {
 				Ars_xinxi:[],        
 			} ,
-			mounted() {
+			   mounted() {
 			     this.$http.get("<?php echo url('ucenter','getAddres');?>
 ")
 			    .then((rtnD) => {
                     this.Ars_xinxi=rtnD.data;
 			    } )
 			},
-		     methods:  {
-		     	greet : function() {
-                var  hidden=document.querySelector(".hideden")
-                hidden.style.display="block";
-                  
-		     } ,
-		     greet_a : function() {
-		     	var hidden=document.querySelector(".hideden")
-                hidden.style.display="none";	
-		     } ,
-             
-             remove :function(n)
-             {
-             	this.Ars_xinxi.splice(n,1);
-             } ,
-             edit :function(x)
-             {
-         	     var   Ars_name=document.querySelector("#Ars_name")
-         	     var   Ars_phone=document.querySelector("#Ars_phone")
-         	     var   Ars_addres_name=document.querySelector("#Ars_addres_name")
-         	      var  Ars_addres=document.querySelector("#Ars_addres")
-         	      var  hidden=document.querySelector(".hideden")
-
+			     methods:  {
+                    
+			     	greet : function() {
+                      var  hidden=document.querySelector(".hideden")
                        hidden.style.display="block";
-                       Ars_name.value=x.Ars_name; 
-                       Ars_phone.value=x.Ars_phone;  
-                       Ars_addres.value=x.Ars_addres;   
-                       Ars_addres_name.value=x.Ars_addres_name;
+                      
+			     } ,
+			     greet_a : function() {
+			     	var hidden=document.querySelector(".hideden")
+                        hidden.style.display="none";	
+			     } ,
+                 
+                 remove :function(n)
+                 {
+                 	this.Ars_xinxi.splice(n,1);
+                 } ,
+                 edit :function(x)
+                 {
+                 	     var   Ars_name=document.querySelector("#Ars_name")
+                 	     var   Ars_phone=document.querySelector("#Ars_phone")
+                 	     var   Ars_addres_name=document.querySelector("#Ars_addres_name")
+                 	      var  Ars_addres=document.querySelector("#Ars_addres")
+                 	      var  hidden=document.querySelector(".hideden")
+                               hidden.style.display="block";
+                               Ars_name.value=x.Ars_name; 
+                               Ars_phone.value=x.Ars_phone;  
+                               Ars_addres.value=x.Ars_addres;   
+                               Ars_addres_name.value=x.Ars_addres_name;
 
-             },
+                 },
 
-              dianji:function(){
-                var hide=document.querySelector(".right_top");
-                hide.style.display="none";
-              },
-		     }
+                  dianji:function(){
+                    var hide=document.querySelector(".right_top");
+                    hide.style.display="none";
+
+
+                  },
+  
+
+                      
+			     }
+
 		});
 	<?php echo '</script'; ?>
 >
-
 </body>
 </html><?php }
 }

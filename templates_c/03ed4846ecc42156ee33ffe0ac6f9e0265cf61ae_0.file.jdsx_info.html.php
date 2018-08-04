@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-08-03 20:57:40
+/* Smarty version 3.1.30, created on 2018-08-04 09:49:23
   from "C:\wamp64\www\20180802\view\jdsx\jdsx_info.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5b64c1c4b83753_05074789',
+  'unifunc' => 'content_5b6576a39cb160_01755779',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '03ed4846ecc42156ee33ffe0ac6f9e0265cf61ae' => 
     array (
       0 => 'C:\\wamp64\\www\\20180802\\view\\jdsx\\jdsx_info.html',
-      1 => 1533327781,
+      1 => 1533376155,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:login_state.html' => 1,
   ),
 ),false)) {
-function content_5b64c1c4b83753_05074789 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b6576a39cb160_01755779 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,10 +30,19 @@ function content_5b64c1c4b83753_05074789 (Smarty_Internal_Template $_smarty_tpl)
 	<title></title>
 	<meta charset="utf-8">
 	<?php echo '<script'; ?>
- type="" src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"> <?php echo '</script'; ?>
+ type="text/javascript" src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ type="text/javascript" src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"><?php echo '</script'; ?>
 >
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="public/static/jdsx_info.css?1">
+    <link rel="stylesheet" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <!-- import iView -->
+    <?php echo '<script'; ?>
+ src="http://unpkg.com/iview/dist/iview.min.js"><?php echo '</script'; ?>
+>
+    <div class="container">
 	<?php $_smarty_tpl->_subTemplateRender("file:ls_css.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -66,7 +75,7 @@ function content_5b64c1c4b83753_05074789 (Smarty_Internal_Template $_smarty_tpl)
 							<img src="public/images/big.jpg" alt="">
 						</div>
 						<div class="fangda">
-							<img src="public/images/icon.png" alt="">
+							<img src="public/images/icon_gq.png" alt="">
 						</div>
 					</div>
 
@@ -138,10 +147,18 @@ function content_5b64c1c4b83753_05074789 (Smarty_Internal_Template $_smarty_tpl)
 					<div class="sp_info">
 						<div class="row item">
 							<div class="col-md-2">配送至</div>
+							<modal v-model="show">
 							<div class="col-md-4 address">
 								<div>北京朝阳区三环至四环之间</div>
-								<div class="hidden_box"></div>
-							</div>
+								<div class="hidden_box">
+									<form action="" class="form">   
+            						    <div class="from-group">
+            						        <label>选择地区</label>
+            						           <Cascader :data="data" v-model="area"></Cascader>
+            						    </div>
+            						</form>
+								</div> 
+						    </modal>
 						</div>
 						<div class="row item">
 							<div class="col-md-2"></div>
@@ -163,16 +180,16 @@ function content_5b64c1c4b83753_05074789 (Smarty_Internal_Template $_smarty_tpl)
 							<div class="hidden_box">无手续费</div>
 						</div>
 						<div class="item">
-							<p>￥22.68起×3期</p>
+							<p>￥22.68起×3</p>
 							<div class="hidden_box">含手续费：费率0.5%起，￥0.34起×3期</div>
 						</div>
 						<div class="item">
-							<p>￥11.49起×6期</p>
+							<p>￥11.49起×6</p>
 							<div class="hidden_box">含手续费：费率0.5%起，￥0.34起×6期</div>
 						</div>
 						<div class="item">
-							<p>￥5.96起×12期</p>
-							<div class="hidden_box">含手续费：费率0.5%起，￥0.34起×12期</div>
+							<p>￥5.96起×1</p>
+							<div class="hidden_box">含手续费：费率0.5%起，￥0.34起×2期</div>
 						</div>
 					</div>
 					<div class="shopcar_box">
@@ -195,17 +212,64 @@ function content_5b64c1c4b83753_05074789 (Smarty_Internal_Template $_smarty_tpl)
 	<?php echo '<script'; ?>
 >
 		Vue.http.options.emulateJSON = true;
-
 		new Vue({
 			el:'.view',
 			delimiters: ['$','$'],
-
 			data:{
 				cur_goods_code:0,
 				move_px:0,
 				change_num:0,
 				box_width:276,
 
+				show:true,
+				area:'',
+				 data:[{
+                    value: 'beijing',
+                    label: '北京',
+                    children: [
+                        {
+                            value: 'gugong',
+                            label: '故宫'
+                        },
+                        {
+                            value: 'tiantan',
+                            label: '天坛'
+                        },
+                        {
+                            value: 'wangfujing',
+                            label: '王府井'
+                        }
+                    ]
+                }, {
+                    value: 'jiangsu',
+                    label: '江苏',
+                    children: [
+                        {
+                            value: 'nanjing',
+                            label: '南京',
+                            children: [
+                                {
+                                    value: 'fuzimiao',
+                                    label: '夫子庙',
+                                }
+                            ]
+                        },
+                        {
+                            value: 'suzhou',
+                            label: '苏州',
+                            children: [
+                                {
+                                    value: 'zhuozhengyuan',
+                                    label: '拙政园',
+                                },
+                                {
+                                    value: 'shizilin',
+                                    label: '狮子林',
+                                }
+                            ]
+                        }
+                    ],
+                }]
 			},
 			methods:{
 				go_left(){

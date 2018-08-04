@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-08-04 09:24:37
-  from "C:\wamp64\www\20180802\view\ucenter\profile.html" */
+/* Smarty version 3.1.30, created on 2018-08-04 09:24:54
+  from "C:\wamp64\www\20180802\view\Ucenter\profile.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5b6570d5975940_16721793',
+  'unifunc' => 'content_5b6570e68f37f4_31234160',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'f4d040b59015c05ecddca61dec66e23a02f07a71' => 
+    '064d8569a6eb6ca3ed9edff87515e61a820db653' => 
     array (
-      0 => 'C:\\wamp64\\www\\20180802\\view\\ucenter\\profile.html',
+      0 => 'C:\\wamp64\\www\\20180802\\view\\Ucenter\\profile.html',
       1 => 1533374676,
       2 => 'file',
     ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:login_state.html' => 1,
   ),
 ),false)) {
-function content_5b6570d5975940_16721793 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b6570e68f37f4_31234160 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">

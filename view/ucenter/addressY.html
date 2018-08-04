@@ -7,9 +7,9 @@
 	<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"></script>
 	<!-- import stylesheet -->
-	<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+	<link rel="stylesheet" href="http://unpkg.com/iview/dist/styles/iview.css">
 	<!-- import iView -->
-	<script src="//unpkg.com/iview/dist/iview.min.js"></script>
+	<script src="http://unpkg.com/iview/dist/iview.min.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -19,7 +19,14 @@
 		<div class="col-md-9">
 			<h3>收获地址管理<a @click="" class="btn btn-success">添加地址</a></h3>
 
-			<modal v-model="show">111</modal>
+			<modal v-model="show">
+				<form action="" class="form">
+					<div class="for-group">
+						<label >收货人</label>
+						<input type="text" class="form-control">
+					</div>
+				</form>
+			</modal>
 			<ul>
 				<li></li>
 			</ul>

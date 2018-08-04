@@ -1,6 +1,6 @@
 
-var btn = document.querySelectorAll(".right .top .nav");
-var con = document.querySelectorAll(".right .bottom .content");
+var btn = document.querySelectorAll(".container .right .top .nav");
+var con = document.querySelectorAll(".container .right .form .content");
 
 for (var i = 0; i < btn.length; i++) {
 	btn[i].id = i;

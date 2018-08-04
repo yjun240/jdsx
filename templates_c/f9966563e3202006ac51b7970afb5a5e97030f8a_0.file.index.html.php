@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-08-03 23:52:24
+/* Smarty version 3.1.30, created on 2018-08-04 06:48:21
   from "C:\wamp64\www\20180802\view\jdsx\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5b64eab8669394_49187774',
+  'unifunc' => 'content_5b654c35ba3ee4_88040592',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f9966563e3202006ac51b7970afb5a5e97030f8a' => 
     array (
       0 => 'C:\\wamp64\\www\\20180802\\view\\jdsx\\index.html',
-      1 => 1533340326,
+      1 => 1533364974,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:login_state.html' => 1,
   ),
 ),false)) {
-function content_5b64eab8669394_49187774 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b654c35ba3ee4_88040592 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -405,6 +405,7 @@ function content_5b64eab8669394_49187774 (Smarty_Internal_Template $_smarty_tpl)
 	<?php echo '<script'; ?>
  src="public/js/text.js"><?php echo '</script'; ?>
 >
+
 </body>
 </html><?php }
 }
