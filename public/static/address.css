@@ -1,0 +1,23 @@
+.nav{width: 100%;background: #e2231a;height: 80px;}
+.nav_a{width: 1190px;height:80px;margin: 0 auto;display: flex;}
+.nav_left img{margin-left: 120px;}
+.nav_mid_left{width: 120px;height: 80px;}
+.first{text-align: center;color:white;margin-top: 10px;position: relative;top: 10px;font-size: 17px;}
+.two {width: 90px;font-size: 12px;color:white;height: 30px;border-radius: 10px ;border: 1px solid white;margin: 0 auto;text-align:center;display: block;line-height: 30px;}
+.two:hover{ background: white }
+.left{height: 450px}
+.right{height: 450px;position: relative;overflow:auto;}
+.box_a{width: 100%; background: white;padding-top: 10px;padding-bottom: 10px;position: relative;}
+.box{margin-top:20px; }
+.left_top{font-size: 18px;text-align: center;line-height: 25px;}
+.left_down ul {margin: 0;padding: 0;list-style: none;}
+.left_down ul li{line-height: 40px;color: white;font-size: 15px;height: 40px;width: 100%;text-align: center;}
+.left_down ul li a{color: black;text-decoration: none;}
+#input_a{margin-left: 25px;}
+.form_a{margin-top:40px;width: 90%;margin: 40px auto;}
+.hidden_top{width: 90%;height: 30px;background: #f3f3f3;margin: 10px auto;}
+.hidden_top p{line-height: 30px;margin-left: 20px; }
+.hidden_top span{margin-right: 15px;line-height: 30px;}
+.hideden{border:1px solid red;background: white;position:fixed;z-index:5;display: none;width: 600px;top: 50px; animation: : mymove 1s;}
+.box_a  a：{margin-left: 20px;}
+.right_top{width: 100%;background: white;}

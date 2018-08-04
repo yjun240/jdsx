@@ -1,0 +1,12 @@
+<div class="top">
+	<p>Jdsx首页</p>
+	<div class="user">
+		{if $uname}
+			<a href="{url('ucenter', 'profile')}">{$uname}已登录</a>
+			<a href="{url('user', 'logout')}">退出登录</a>
+		{else}
+			<a href="{url('user', 'login')}">您好，请登录！</a>
+			<a href="{url('user', 'register')}">免费注册</a>
+		{/if}
+	</div>
+</div>

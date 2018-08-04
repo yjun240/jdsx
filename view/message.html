@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提醒跳转</title>
+</head>
+<body>
+	{$msg}
+	<br>
+	<b id="s"></b>秒后，自动跳转
+	<a href="{$url}">手动跳转</a>
+	
+	<script>
+
+		setInterval(skip, 1000);
+		var n = 3;
+		document.querySelector("#s").innerHTML = n;
+		function skip() {
+			if (n > 0) {
+				document.querySelector("#s").innerHTML = n;
+			} else {
+				location.href = "{$url}";
+			}
+			--n;
+		}
+
+	</script>
+	
+</body>
+</html>

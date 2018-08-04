@@ -1,0 +1,252 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+.container{
+	width: 1190px;
+			//height: 540px;
+	margin: 28px auto;
+}
+.box_top{
+	width: 100%;
+	height: 100px;
+	background: url('../images/box_top.png');
+	display: flex;
+}
+.box_bottom{
+	width: 1170px;
+	height: 432px;
+	border: 10px solid #6a6a6a;
+	border-top: 0px;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+}
+.box_top .t_left{
+	width: 600px;
+	height: 100%;
+	/*padding-top: 20px;*/
+	display: flex;
+	/*background: blue;*/
+}
+.box_top .t_right{
+	width: 590px;
+	height: 100%;
+	/*background: yellow;*/
+	text-align: center;
+	overflow: hidden;
+}
+.box_bottom .arrow_head{
+	width: 20px;
+	height: 50px;
+	background: #cccccc;
+	color: #fff7eb;
+	text-align: center;
+	font-size: 21px;
+	line-height: 42px;
+	position: absolute;
+	top: 176px;
+	cursor: pointer;
+}
+.box_bottom .ah_left{
+	left: 0;
+}
+.box_bottom .ah_right{
+	right: 0;
+}
+.box_bottom .bar_box{
+	width: 1100px;
+	height: 412px;
+	margin: 20px 0 0 35px;
+	overflow: hidden;
+}
+.box_bottom .bar_dot{
+	position: absolute;
+	bottom: 29px;
+	/*1170/2=585,44/2=22,585-22=563*/
+	left: 563px;
+	display: flex;
+}
+.box_top .t_left .tl_content{
+	margin-top: 20px;
+	height: 80px;
+	flex: auto;
+	display: flex;
+	cursor: pointer;
+	color: #909090;
+}
+.box_top .t_left .p_light{
+	/*预先设定第一个的字体为绿色*/
+	color: #00c65d;
+}
+.box_top .t_right .tr_p{
+	width: 327px;
+	height: 33px;
+	font-size: 11px;
+	color: #fff;
+	text-align: center;
+	margin: 0px 10px 0px 253px;
+	line-height: 32px;
+
+}
+.box_top .t_right .tr_time{
+	width: 206px;
+	height: 46px;
+	margin-right: 70px;
+	float: right;
+	display: flex;
+	font-size: 33px;
+	text-align: center;
+}
+.box_bottom .bar_box ul.bar{
+	/*width: n*100%;*/
+	width: 200%;
+	height: 345px;
+	padding-top: 10px;
+	overflow: hidden;
+	position: relative;
+}
+.box_bottom ul.bar_dot li{
+	width: 6px;
+	height: 6px;
+	border: 1px solid #33d17d;
+	border-radius: 25px;
+	cursor: pointer;
+}
+.box_bottom ul.bar_dot li+li{
+	margin-left: 10px;
+}
+.box_bottom ul.bar_dot li.cur{
+	background: #33d17d;
+}
+.box_top .t_left .tl_content .icon{
+	width: 41px;
+	height: 41px;
+	margin: 20px 0px 0px 50px;
+}
+.box_top .t_left .tl_content .morning{
+	background: url('../images/icon.png');
+	/*-181-40*/
+	background-position: 0px -221px;
+}
+.box_top .t_left .tl_content .afternoon{
+	background: url('../images/icon.png');
+	background-position: -41px -181px;
+}
+.box_top .t_left .tl_content .night{
+	background: url('../images/icon.png');
+	background-position: -82px -181px;
+}
+.box_top .t_left .tl_content .tl_p{
+	height: 41px;
+	margin: 17px 0px 0px 20px;
+}
+.box_top .t_right .tr_time .time_box{
+	width: 50px;
+	height: 100%;
+	background: #000;
+	color: #fff;
+}
+.box_top .t_right .tr_time .two_dot{
+	width: 28px;
+	height: 100%;
+	color: #000;
+}
+.box_bottom .bar_box ul.bar li{
+	width: 180px;
+	height: 345px;
+	padding: 0px 20px;
+	float: left;
+	position: relative;
+}
+.box_bottom .bar_box ul.bar li:hover{
+	/*box-shadow: 2:2:3*/
+	box-shadow: 2px 2px 3px #eeeeee;
+}
+.box_top .t_left .tl_content .tl_p>p{
+	font-size: 18px;
+}
+.box_top .t_left .tl_content .tl_p>p+p{
+	font-size: 14px;
+	line-height: 25px;
+}
+.box_bottom .bar_box ul.bar li a{
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+.box_bottom .bar_box ul.bar li a .price{
+	width: 100%;
+	height: 30px;
+	background: #ff541f;
+	color: #fff;
+	display: flex;
+	margin-top: -10px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.box_bottom .bar_box ul.bar li a .goods_img{
+	width: 100%;
+	height: 180px;
+	margin-top: 20px;
+}
+.box_bottom .bar_box ul.bar li a .g_datails{
+	width: 100%;
+	height: 67px;
+	margin-top: 13px;
+	font-size: 16px;
+	color: #000;
+	line-height: 27px;
+	/*word-wrap (CSS3)允许长单词换行到下一行 */
+	/*word-break (CSS3)在恰当的断字点进行换行(单词内换行) */
+	word-wrap: break-word;
+}
+.box_bottom .bar_box ul.bar li a .praise_rate{
+	width: 100%;
+	height: 29px;
+	font-size: 14px;
+	line-height: 23px;
+	color: #909090;
+	text-align: center;
+}
+.box_bottom .bar_box ul.bar li a .pr_sum{
+	width: 100%;
+	height: 3px;
+	background: #dddddd;
+	margin-bottom: 13px;
+}
+.box_bottom .bar_box ul.bar li a .purchase{
+	width: 220px;
+	height: 40px;
+	background: #ff541f;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+    line-height: 38px;
+	/*position是从border(不算border)开始算起的！！！*/
+	position: absolute;
+	left: 0px;
+	bottom: -40px;
+}
+.box_bottom .bar_box ul.bar li a .price .price_l{
+	flex: auto;
+	font-size: 20px;
+	text-align: right;
+}
+.box_bottom .bar_box ul.bar li a .price .price_s{
+	flex: auto;
+	font-size: 13px;
+	color: #ffa48f;
+	line-height: 34px;
+	text-indent: 12px;
+	/*在文本中间画一个贯穿线，等价于 HTML 中的 S 和 strike 元素。*/
+	text-decoration: line-through;
+}
+.box_bottom .bar_box ul.bar li a .pr_sum .pr_value{
+	width: 98%;
+	height: 100%;
+	background: #ff541f;
+}
