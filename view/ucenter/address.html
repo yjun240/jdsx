@@ -1,53 +1,20 @@
-<?php
-/* Smarty version 3.1.30, created on 2018-08-04 18:36:07
-  from "C:\wamp64\www\20180802\view\ucenter\address.html" */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.30',
-  'unifunc' => 'content_5b65f217adcb50_91755522',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    'f5c71faa85458f02d57d770a43672d18204ce7ae' => 
-    array (
-      0 => 'C:\\wamp64\\www\\20180802\\view\\ucenter\\address.html',
-      1 => 1533407765,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-    'file:ucenter/menu.html' => 1,
-  ),
-),false)) {
-function content_5b65f217adcb50_91755522 (Smarty_Internal_Template $_smarty_tpl) {
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>收货地址</title>
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<?php echo '<script'; ?>
- type="text/javascript" src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- type="text/javascript" src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"><?php echo '</script'; ?>
->
+	<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"></script>
 	<!-- import stylesheet -->
 	<link rel="stylesheet" href="http://unpkg.com/iview/dist/styles/iview.css">
 	<!-- import iView -->
-	<?php echo '<script'; ?>
- src="http://unpkg.com/iview/dist/iview.min.js"><?php echo '</script'; ?>
->
+	<script src="http://unpkg.com/iview/dist/iview.min.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="col-md-3">
-			<?php $_smarty_tpl->_subTemplateRender("file:ucenter/menu.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
+			{include file="ucenter/menu.html"}
 		</div>
 		<div class="col-md-9">
 			<h3>收获地址管理<a @click="show=true" class="btn btn-success">添加地址</a></h3>
@@ -73,8 +40,7 @@ function content_5b65f217adcb50_91755522 (Smarty_Internal_Template $_smarty_tpl)
 		</div>
 	</div>
 
-	<?php echo '<script'; ?>
- type="text/javascript">
+	<script type="text/javascript">
 		// vue-resource post方式提交参数php $_POST获取不到
 		// post的请求头是Request Payload
 		// 加上下面这行就变成了 Form Data
@@ -139,16 +105,14 @@ function content_5b65f217adcb50_91755522 (Smarty_Internal_Template $_smarty_tpl)
                 }]
 			},
 			mounted(){
-				this.$http.post('<?php echo url("ucenter","getAddress");?>
-')
+				this.$http.post('{url("ucenter", "getAddress")}')
 				.then((rtnD)=>{
 					this.addr_list = rtnD.data
 				})
 			},
 			methods:{
 				add(){
-					this.$http.post('<?php echo url("ucenter","saveAddress");?>
-', {
+					this.$http.post('{url("ucenter", "saveAddress")}', {
 						receive_people: this.receive_people,
 						// js不可以传数组，要用JSON.stringify()，数组转成JSON字符串
 						area: JSON.stringify(this.area),
@@ -159,8 +123,6 @@ function content_5b65f217adcb50_91755522 (Smarty_Internal_Template $_smarty_tpl)
 				}
 			}
 		})
-	<?php echo '</script'; ?>
->
+	</script>
 </body>
-</html><?php }
-}
+</html>

@@ -26,6 +26,7 @@
 				<ul>
 					<li><a href="{url('ucenter', 'profile')}">个人信息</a></li>
 					<li><a href="{url('ucenter', 'show')}">收货地址</a></li>
+					<li><a href="{url('ucenter', 'address')}">YJ的收货地址</a></li>
 				</ul>
 			</div>
 		</div>
@@ -146,7 +147,6 @@
 	</div>
 
 <script>
-	Vue.http.options.emulateJSON = true;
 	new Vue({
 		el:'.container',
 		delimiters:['$','$'],

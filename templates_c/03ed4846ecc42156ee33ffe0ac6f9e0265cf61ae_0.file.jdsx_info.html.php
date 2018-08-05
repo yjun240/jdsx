@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-08-04 09:49:23
+/* Smarty version 3.1.30, created on 2018-08-04 17:01:33
   from "C:\wamp64\www\20180802\view\jdsx\jdsx_info.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5b6576a39cb160_01755779',
+  'unifunc' => 'content_5b65dbed44dca8_11605008',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '03ed4846ecc42156ee33ffe0ac6f9e0265cf61ae' => 
     array (
       0 => 'C:\\wamp64\\www\\20180802\\view\\jdsx\\jdsx_info.html',
-      1 => 1533376155,
+      1 => 1533402091,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:login_state.html' => 1,
   ),
 ),false)) {
-function content_5b6576a39cb160_01755779 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b65dbed44dca8_11605008 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -211,7 +211,6 @@ function content_5b6576a39cb160_01755779 (Smarty_Internal_Template $_smarty_tpl)
 
 	<?php echo '<script'; ?>
 >
-		Vue.http.options.emulateJSON = true;
 		new Vue({
 			el:'.view',
 			delimiters: ['$','$'],

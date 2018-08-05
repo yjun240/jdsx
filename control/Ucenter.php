@@ -19,12 +19,12 @@ class Ucenter extends Auth{
         '服饰内衣/珠宝首饰', '个护化妆', '鞋靴/箱包/钟表/奢侈品', '运动健康', '汽车用品', '母婴/玩具乐器'];
        	$this->assign('hobby',json_encode($hobby));
 
-
 		$this->display();
 	}
 
 	// 柳娜 2
-	public function doprofile(){
+	public function doprofile()
+	{
     	$this->model('uinfo')->insert([
     		'name'=>$_POST['name'],
     		'sex'=>$_POST['sex'],
@@ -36,25 +36,31 @@ class Ucenter extends Auth{
     	header('location:'.url('ucenter','profile'));
     }
 
-	// // 收货地址
-	// public function address()
-	// {
-	// 	$this->assign('uname', $_SESSION['u_name']);
-	// 	$this->display();
-	// }
-
-	// 收货地址Y
-	public function addressY()
+	// 收货地址
+	public function address()
 	{
 		$this->assign('uname', $_SESSION['u_name']);
 		$this->display();
 	}
 
-	// 返回user表里面的全部数据
-	public function getUserName()
+	// 保存收获地址
+	public function saveAddress()
 	{
+		// implode(separator,array) 返回由数组元素组合成的字符串
+		// $area = implode('|', json_decode($_POST['area'], true));
+		// 不用加，是字段的问题，没对应
+    	$this->model('address')->insert([
+    		'receive_people' => $_POST['receive_people'],
+    		'area' => $_POST['area']
+    	]);
+    	echo json_encode(['status'=>1]);
+	}
 
-		return $username;
+	// 获取所有收获地址
+	public function getAddress()
+	{
+		$ad_list = $this->model('address')->select();
+    	echo json_encode($ad_list);
 	}
 
 	// 凯阳 1
@@ -73,6 +79,7 @@ class Ucenter extends Auth{
 			'Ars_phone'=>$Ars_phone,
 		]);
 	}
+
 	// 凯阳 2
 	public function getAddres()
 	{

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-08-04 09:24:37
+/* Smarty version 3.1.30, created on 2018-08-04 17:06:59
   from "C:\wamp64\www\20180802\view\ucenter\profile.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5b6570d5975940_16721793',
+  'unifunc' => 'content_5b65dd333210f8_62470081',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f4d040b59015c05ecddca61dec66e23a02f07a71' => 
     array (
       0 => 'C:\\wamp64\\www\\20180802\\view\\ucenter\\profile.html',
-      1 => 1533374676,
+      1 => 1533402352,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:login_state.html' => 1,
   ),
 ),false)) {
-function content_5b6570d5975940_16721793 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b65dd333210f8_62470081 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,6 +62,8 @@ function content_5b6570d5975940_16721793 (Smarty_Internal_Template $_smarty_tpl)
 ">个人信息</a></li>
 					<li><a href="<?php echo url('ucenter','show');?>
 ">收货地址</a></li>
+					<li><a href="<?php echo url('ucenter','address');?>
+">YJ的收货地址</a></li>
 				</ul>
 			</div>
 		</div>
@@ -186,7 +188,6 @@ function content_5b6570d5975940_16721793 (Smarty_Internal_Template $_smarty_tpl)
 
 <?php echo '<script'; ?>
 >
-	Vue.http.options.emulateJSON = true;
 	new Vue({
 		el:'.container',
 		delimiters:['$','$'],

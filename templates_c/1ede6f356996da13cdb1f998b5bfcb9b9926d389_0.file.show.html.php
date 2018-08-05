@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-08-04 07:24:23
+/* Smarty version 3.1.30, created on 2018-08-04 17:06:46
   from "C:\wamp64\www\20180802\view\ucenter\show.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5b6554a73ec6d8_70391799',
+  'unifunc' => 'content_5b65dd266343c0_51902753',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1ede6f356996da13cdb1f998b5bfcb9b9926d389' => 
     array (
       0 => 'C:\\wamp64\\www\\20180802\\view\\ucenter\\show.html',
-      1 => 1533367443,
+      1 => 1533402295,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b6554a73ec6d8_70391799 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b65dd266343c0_51902753 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -124,7 +124,6 @@ function content_5b6554a73ec6d8_70391799 (Smarty_Internal_Template $_smarty_tpl)
 <?php echo '<script'; ?>
  type="text/javascript">
 	
-   Vue.http.options.emulateJSON = true;
 		new Vue({
 			el:'.container',
 			delimiters:['$','$'],
